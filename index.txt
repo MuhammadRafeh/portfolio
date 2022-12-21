@@ -2,8 +2,8 @@ vCard - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
+alt = Muhammad Rafeh
+Muhammad Rafeh
 Web developer
 
 Show Contacts
