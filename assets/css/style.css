@@ -292,9 +292,13 @@ article.active {
   z-index: -1;
 }
 
-
-
-
+.custom-link {
+  text-decoration: underline;
+  color: inherit;
+  white-space: nowrap;
+  display: inline-block;
+  text-underline-offset: 5px;
+}
 
 /*-----------------------------------*\
   #MAIN
