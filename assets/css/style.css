@@ -292,13 +292,7 @@ article.active {
   z-index: -1;
 }
 
-.custom-link {
-  text-decoration: underline;
-  color: inherit;
-  white-space: nowrap;
-  display: inline-block;
-  text-underline-offset: 5px;
-}
+
 
 /*-----------------------------------*\
   #MAIN
@@ -833,6 +827,61 @@ main {
   line-height: 1.6;
 }
 
+.custom-list {
+  list-style: none; /* Remove default bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.custom-list li {
+  position: relative; /* To position the dash correctly */
+  padding-left: 20px; /* Add padding to make space for the dash */
+  word-wrap: break-word; /* Allow text to break and wrap inside the container */
+  overflow-wrap: break-word; /* Ensure long words break and wrap properly */
+  width: 100%; /* Make sure li takes full available width */
+}
+
+.custom-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word;
+}
+
+.custom-list li::before {
+  content: "- ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--dash-color, var(--light-gray));
+}
+
+.custom-link {
+  text-decoration: underline;
+  color: inherit;
+  text-underline-offset: 5px;
+}
+
+/* Mobile-specific fix */
+@media (max-width: 768px) {
+  .custom-list li {
+    padding-left: 15px; /* Reduce space on smaller screens */
+    word-wrap: break-word;
+    white-space: normal; /* Ensure wrapping works well for smaller screens */
+  }
+
+  /* Prevent horizontal scroll by applying to parent container */
+  body, html {
+    overflow-x: hidden; /* Disable horizontal scroll globally */
+  }
+
+  .custom-list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
 
 /**
  * skills 
