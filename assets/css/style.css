@@ -843,7 +843,7 @@ main {
 .skills-list { padding: 20px; }
 
 
-.skills-item:not(:last-child) { margin-bottom: 15px; }
+.skills-item:not(:last-child) { margin-bottom: 5px; }
 
 .skill .title-wrapper {
   display: flex;
@@ -1502,7 +1502,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     left: -43px;
   }
 
-  .skills-item:not(:last-child) { margin-bottom: 25px; }
+  .skills-item:not(:last-child) { margin-bottom: 5px; }
 
 
 
