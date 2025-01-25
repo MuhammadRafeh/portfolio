@@ -159,3 +159,28 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const openButtons = document.querySelectorAll(".open-portfolio-modal");
+  const closeButtons = document.querySelectorAll(".portfolio-close-modal");
+
+  openButtons.forEach(button => {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      const modalId = this.getAttribute("data-modal");
+      document.getElementById(modalId).style.display = "flex";
+    });
+  });
+
+  closeButtons.forEach(button => {
+    button.addEventListener("click", function () {
+      this.closest(".portfolio-modal").style.display = "none";
+    });
+  });
+
+  window.addEventListener("click", function (e) {
+    if (e.target.classList.contains("portfolio-modal")) {
+      e.target.style.display = "none";
+    }
+  });
+});
